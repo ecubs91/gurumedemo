@@ -1,148 +1,125 @@
 <div class="searchresults">
   <div class="row">
-    <div class="col-md-1 col-sm-2 col-xs-1"></div>
-    <div class="col-md-7 col-sm-7 col-xs-10">
-      <h2>
-        그루미와 <span style="font-size:45px; color:white">모든 과목</span> 그리고 <span style="font-size:45px; color:white">모든 커리큘럼</span>! 
-      </h2>
+    <div class="col-md-1"></div>
+    <div class="col-md-4 col-sm-6 col-xs-7">
+      <img src="https://s3-ap-northeast-1.amazonaws.com/gurumek/new+folder/ourtutorsfinal.jpg" style="max-width:100%">
+    </div>
+    <div class="col-md-5 col-sm-6 col-xs-5">
+      <h1>Our Tutors</h1>
     </div>
   </div>
 </div>
+
 <div class="container profile">
   <br>  
 <div class="row">
   <div class="col-md-3 col-sm-4" style="border-right: 2px solid #eee">
-    <%= form_tag search_tutor_profiles_path, method: :get, class: "center" do %>
-        <div class="row">
-          <div class="col-lg-10">
-            <%= select_tag :search, options_for_select(@all_tutors.map {|tt| [tt.split.map{ |w| ['and','or','of'].include?(w) ? w : w.capitalize}.join(' '),tt]}.insert(0, ["수업과목",nil])), :id => "e1", :style=>"width:100%;", :class => "form-control" %>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-10">
-            <div onclick="open">
-              <h5>대입 준비</h5>
-            </div>
-            <div id="universityAdmissionLevels">
-              <!---------------University level---------------->
-                <% Level.university_admission_levels.each do |ual| %>
-                  <%= check_box_tag "level[]", ual %> <%= ual %><br>
-                <% end %>
-              <!---------------/University level---------------->
-            </div>
-            <div id="examPreparation">
-              <h5>시험 준비</h5>
-            </div>
-            <div id="examPreparationLevel">
-              <!---------------Exam Preparation---------------->
-                <% Level.exam_preparation_levels.each do |epl| %>
-                  <%= check_box_tag "level[]", epl %> <%= epl %><br>
-                <% end %>
-              <!---------------/Exam Preparation---------------->
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-10"  style="margin-top: 10px;">
-            <%= label_tag "희망 대학" %>
-            <%= select_tag :search_university, options_for_select(University.all.map{|u| [u.name.capitalize,u.name]},(@tutor_profile.university rescue nil)), :include_blank => true, :id => "university", :class => "form-control" %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-10"  style="margin-top: 10px;">
-            <%= label_tag "수업위치" %>            
-            <%= select_tag :search_country, options_for_select([[" 나라 선택",""]]+@countries.map{|c| [c.name.capitalize,c.name]}), :class => "form-control", :onchange=>"get_country_set_city(this.value)" %>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-10" style="margin-top: 10px;">
-            <div id="search_city_select">
-              <%= select_tag :search_city, options_for_select([[" 도시 선택",""]]), :id => "e4", :class => "form-control indexsearchbox mrgtop10" %>
-            </div>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-10">
-            <%= submit_tag "선생님 찾기", :name => nil, :class => "btn btn-primary pull-right" %>
-          </div>
-        </div>
-    <% end %>
+    <h2>A short list of our tutors</h2>
+    <p>On the right, we show some of our tutors.</p>
   </div>
-
-  <!------------- Right Panel for search results------------>
-  <% @all_profiles =  @tutor_profiles.collect{|tp|tp.id } %>
-
   <div class="col-md-9 col-sm-7">
-    <% @tutor_profiles.each do |tutor_profile| %>
       <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">
-          <%= link_to tutor_profile_path(:id => tutor_profile.id, :similar_profiles => @all_profiles-[tutor_profile.id], :search_levels => @search_levels, :search_subject => @search_subject) do %>
-            <div class="round-avatar" style = 'background-image: url(<%= tutor_profile.image.url(:small) rescue "/assets/default.jpg" %>); background-size: 120px; margin-left:auto; margin-right:auto;'></div>
-          <% end %>
-          <% if tutor_profile.user==current_user %>
-          <%= link_to '프로필 없애기', tutor_profile, style: "text-align:center", class: "linkbutton", method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
+        <div class="col-md-2 col-sm-4 col-xs-12">       
+            <img src="https://dl.dropboxusercontent.com/s/32h1enk3kzgpd1l/For_Madelaine.jpg?dl=0" class="img-circle" style="width: 120px; img:circular">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">
-          <%= link_to tutor_profile_path(:id => tutor_profile.id, :similar_profiles => @all_profiles-[tutor_profile.id], :search_levels => @search_levels, :search_subject => @search_subject) do %>
-          <h3><%= "#{tutor_profile.user.first_name}" %></h3>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Madelaine T.</h3>
           <p>
-            대학/전공: <%= tutor_profile.university.capitalize %>/ <%= tutor_profile.tutor_degree_subjects.first.degree_subject.capitalize unless tutor_profile.tutor_degree_subjects.blank?  %><br> 
-            국내: <%= [tutor_profile.location_city,tutor_profile.location].join(" | ") %> <br>
-            해외: <%= [tutor_profile.location_two,tutor_profile.country].join(" | ") %><br>
-            수업과목: <%= tutor_profile.tutor_teaching_subjects.pluck(:teaching_subject).map { |ts| ts.capitalize}.join(", ") %>
+            University/ Degree: Cambridge/ Engineering<br>         
+            Teaching Subjects: Maths, Chemistry, Physics<br>
+            Teaching Levels: IB<br>        
           </p>
-          <p style="font-size:14px;"><%= truncate(tutor_profile.about_myself, :length => 120) %></p>
-          <div class="truncate"></div>
-          <% end %>
+          <p style="font-size:14px;">My name is Madeleine Steer and I am a second year engineer at Jesus College, Cambridge. I achieved A*s in Maths, Physics and French at A Level, as well as As in Further Maths, German and Ancient Greek at AS. I achieved 11 A*s at GCSE level, and hope that my previous academic success will make me a suitable candidate if you are trying to choose a tutor.</p>          
         </div>                            
       </div>
-    <% end %>
-    <div class="float-rht">
-      <%= will_paginate @tutor_profiles, renderer: BootstrapPagination::Rails %>
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">        
+            <img src="https://dl.dropboxusercontent.com/s/h5vj8qce3xkfhrj/hugo%20lucas.jpg?dl=0" class="img-circle" style="width: 120px">        
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Hugo L.</h3>
+          <p>
+            University/ Degree: Oxford/ PPE<br>         
+            Teaching Subjects: Politics, History, Economics<br>
+            Teaching Levels: A-Level<br>        
+          </p>
+          <p style="font-size:14px;">Past education is Westminster School, where I completed my GCSEs and A-levels (grades available upon request). I am a fluent German speaker, while also having command over conversational french. </p>          
+        </div>                            
+      </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">         
+            <img src="https://dl.dropboxusercontent.com/s/36nemp1gi7xfg75/harry%20mallinson.jpg?dl=0" class="img-circle" style="width: 120px">        
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Henry M.</h3>
+          <p>
+            University/ Degree: Oxford/ Physics and Philsophy<br>         
+            Teaching Subjects: Physics, Philosophy, Mathematics<br>
+            Teaching Levels: A-Level<br>        
+          </p>
+          <p style="font-size:14px;">I am a third year student of Physics and Philosophy at the University of Oxford, with several years of experience tutoring to various levels of age and ability. With 10A*s at GCSE and A*s at A level (including in Maths and Physics) I am able to teach a subject and importantly its exam technique to the very highest level, whatever the age or current academic level of the student.</p>          
+        </div>                            
+      </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">         
+            <img src="https://dl.dropboxusercontent.com/s/z3pl3bwq12hnt6y/lakshmi_manjoosha.jpg?dl=0" class="img-circle" style="width: 120px">        
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Lakshmi M.</h3>
+          <p>
+            University/ Degree: Oxford/ Engineering<br>         
+            Teaching Subjects: Mathematics, Chemistry, Physics<br>
+            Teaching Levels: A-Level, IB<br>        
+          </p>
+          <p style="font-size:14px;">I am currently a second year DPhil student at St Edmund Hall college. My research is focused on wastewater treatment and is funded by the National University of Singapore. Apart from doing that, I’m extremely passionate about technology, education and social enterprises! I am an avid member of Enactus Oxford and also the vice president of Oxford Women for Women International. </p>          
+        </div>                            
     </div>
-  </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">        
+            <img src="https://dl.dropboxusercontent.com/s/7i5safqh1z6ibcr/10458986_590268971093972_6021020358081408888_o.jpg?dl=0" class="img-circle" style="width: 120px">        
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Alice C.</h3>
+          <p>
+            University/ Degree: Cambridge/ Natural Sciences<br>         
+            Teaching Subjects: Mathematics, Chemistry, Physics<br>
+            Teaching Levels: A-Level<br>        
+          </p>
+          <p style="font-size:14px;">Graduated from Cambridge in 2014, I am working in London as a consultant. I finished my first year with a first in Biology of Cells and Elementary maths for Biologists, a 2.i in Chemistry and a 2.ii in Evolution and Animal Behaviour.</p>          
+        </div>                            
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">         
+            <img src="https://dl.dropboxusercontent.com/s/i0z2vrh3sz43qi2/Oliver-Johnson%20Munday.JPG?dl=0" class="img-circle" style="width: 120px">        
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Oliver J.</h3>
+          <p>
+            University/ Degree: Oxford/ Law<br>         
+            Teaching Subjects: English, History<br>
+            Teaching Levels: A-Level<br>        
+          </p>
+          <p style="font-size:14px;">Oliver is a first year undergraduate, reading at Balliol College, Oxford for a BA in Law (Jurisprudence). Prior to university, he was an academic scholar at Eton College, leaving with 10A*s and an A at (I)GCSE, and straight As throughout AS and A levels.</p>          
+        </div>                            
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">    
+            <img src="https://dl.dropboxusercontent.com/s/g85wh1qxgqrdvng/shayantan%20rahman.jpg?dl=0" class="img-circle" style="width: 120px">        
+        </div>
+        <div class="col-md-6 col-sm-8 col-xs-12">          
+          <h3>Shay R.</h3>
+          <p>
+            University/ Degree: Oxford/ Economics and Management<br>         
+            Teaching Subjects: Mathematics, Economics<br>
+            Teaching Levels: A-Level, IB<br>        
+          </p>
+          <p style="font-size:14px;">I am currently a final year student at St. Edmund Hall. Brought up in England and India, I finished my schooling in Kolkata, where I studied English, Maths, Economics, Physics, Chemistry, Environmental Science and Physical Education in my ISC (Indian A-level equivalent examinations). </p>          
+        </div>                            
+    </div>
+    
+    
+  
+
+  
 </div>
-       
-<br>
-
-<br>
-</div>
-
-<style>
-    .filter {
-        color: black
-    }
-    .filter:hover {
-        color: black
-    }
-</style>
-
-<script>
-  $(document).ready(function() { $("#e1").select2({placeholder: "Select subject", allowClear: true}); });
-  $(document).ready(function() { $("#e2").select2({placeholder: "Select University", allowClear: true}); });
-</script>
-
-<script>
-  function get_country_set_city(country_name){
-    $.ajax({
-      url: "<%= pages_get_country_set_city_path %>",
-      method: "POST",
-      data: {country_name : country_name},
-      success:function(data){
-        cities = data.cities
-        options = '<option></option>'
-        for(i=0;i<cities.length;i++){
-          options = options + '<option value='+'"'+ cities[i]+'"' +'> ' + cities[i] + '</option>'
-        }
-        $("#search_city_select").html(
-            '<select class="form-control" name="search_city" >'+
-            options+
-            '</select>'
-        )
-      }
-    })
-  }
-</script>
+  

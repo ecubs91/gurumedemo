@@ -177,9 +177,8 @@
   color: #6c767f; 
   }
 }
-.index {
-  max-width: 100%;
-  background-image: url("https://dl.dropboxusercontent.com/s/b0lgjnvxkbod5n4/collage2.jpg");
+.homepage {
+  background-image: url("https://s3-ap-northeast-1.amazonaws.com/gurumek/new+folder/banner4.jpg");
   background-size: cover;
   h1, h2 {
   font-family: guardian-egyptt, georgia, serif;
@@ -187,13 +186,29 @@
   text-align: center;
   }
 }
+ 
+.homepagetextbox {
+  width:55%;
+  margin-left: 20%;  
+  background: #DBDBDB;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  opacity: 0.8;
+  h2, h3 {
+    padding: 12px 12px 12px 12px;
+    text-align: center;
+    font-style: italic;
+    color: #545454;
+  }
+  
+}
 .tutor {
   background-color: #fafafa;
   h2 {color: #36495e}
   p {font-size: 16px;}
 }   
 .about {
-  background-image: url("https://dl.dropboxusercontent.com/s/2x2hq94jt5dluul/aboutus.JPG");
+  background-image: url("https://s3-ap-northeast-1.amazonaws.com/gurumek/new+folder/IMG_7562.JPG");
   background-size: cover;
   height: 100%
 }
@@ -861,11 +876,12 @@ p a:hover {
 }
 
 .searchresults {
-  background: #2e3945;
+  background: #eeeeee;
   margin-bottom: 30px;
   h2 {
     color: #e0e0e0;
     padding: 20px 0px 30px 0px;
+   
   }
 }
 .truncate {

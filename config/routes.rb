@@ -43,6 +43,7 @@ Etsydemo::Application.routes.draw do
         post 'send_invitation_for_review'
         get 'send_user_specific_request_for_review'
       end
+      
       resources :tuitions do
         collection do
           get 'book_tuition'
@@ -83,7 +84,7 @@ Etsydemo::Application.routes.draw do
   get "pages/students_parents"
   get "pages/services_for_schools"
   get "pages/partners"
-  get "pages/online_tuition"
+  
   get "pages/how_it_works"
   get "pages/terms_and_conditions"
   get "pages/terms_and_conditions/for_tutors"
@@ -95,6 +96,12 @@ Etsydemo::Application.routes.draw do
   get "pages/our_stars"
   get "pages/recruiting"
   get "pages/us_admissions"
+  
+  get "pages/about"
+  get "pages/language_learning"
+  get "pages/examinations"
+  get "pages/online_tuition"
+  
   
   post "pages/get_town_from_country_for_step_1"
   post "pages/get_country_set_city"
