@@ -1,33 +1,59 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  post_a_tutor_profile: Post a Tutor Profile
-  write_a_review: Write a Review
-  tutorial_type: Tutorial Type
-  university: University %{university}
-  degree_subject: Degree Subject %{degree_subject}
-  location: Location %{location}  
-  tutorial_type: Tutorial Type %{tutorial_type}
 
+#header
+  About Us: About Us
+  Our Tutors: Our Tutors
+  Our Services: Our Services
+  Examination Preparation: Examination Preparation
+  Contact Us: Contact Us
+  
+#about us
+  About Us p1: Edusia is a platform for connecting tutors that can offer academic expertise to students that seek academic support outside school. We offer a network of graduates from top UK universities, namely Oxford and Cambridge. Our tutors give academic support with school curriculum and exam preparation.
+  About Us p2: Edusia was established to make top quality private tutoring more accessible by sourcing Oxbridge graduates in the UK who are as well educated, dedicated and responsible as online tutors. More importantly, our aim is to go beyond just offering lessons for achieving higher academic grades but to offer mentors that can share with students the footsteps they have taken and offer advice and guidance on their academic career like school seniors.
+  About Us p3: being a good tutor is about communicating the tutor’s academic expertise in a concise and comprehensive way to facilitate the student’s understanding of the subject. To do so requires experience of interacting with students. Therefore, all our tutors have teaching experiences.
+  About Us p4: it is true that being the top of the year does not mean that he/she will be the best tutor. However, Edusia believe that as well as confidence and experience in teaching, in-depth knowledge of the subject is essential. Therefore, all our tutors have achieved highest grade in subjects that they teach.
+  Why you can trust Edusia: Why you can trust Edusia
+  Teaching Experience: Teaching Experience
+  Academic Excellence: Academic Excellence
+
+#about us
+  University: University
+  Degree: Degree
+  Cambridge: Cambridge
+  Oxford: Oxford
+  Engineering: Engineering
+  Teaching Subjects: Teaching Subjects
+  Teaching Levels: Teaching Levels
+  Mathematics: Mathematics
+  Chemistry: Chemistry
+  Physics: Physics
+  PPE: PPE
+  Physics and Philsophy: Physics and Philsophy
+  Engineering: Engineering
+  Natural Sciences: Natural Sciences
+  Law: Law
+  Economics and Management: Economics and Management
+  Economics: Economics
+  History: History
+  English: English
+  Philosophy: Philosophy
+  Politics: Politics
+  
+  Language Learning: Language Learning
+  Language Learning p: Edusia believes that the best way to improve language speaking is to practice speaking in that language with a native speaker. Speaking can often be neglected in language courses with greater focus on reading and writing, perhaps because reading and writing can be studied by students themselves. For speaking practice, there are many language learning institutions working with native speakers to teach foreign languages but lessons from such institutions can be costly. Young Tutors offers a platform where language learners can meet native speakers for online chat lessons at an affordable price.
+  
+  Online Tuition: Online Tuition
+  Online Tuition p: Students and tutors use computer, web browser and broadband internet for secure online tutorial. Live video chat program such as skype allows students and tutors to look at each other and communicate in real time while educational whiteboard program provides a canvas where students and tutors can write with online pen and paper to share problems, solutions and explanations. In addition, academic materials such as problem sheets and past papers in image, word and pdf files can be uploaded for students and tutors to write and work on.
+  Online Tuition html: Skype is recommended as the live video chat program because it is international and free while we recommend Idroo for virtual whiteboard. Skype is a free program that can be easily downloaded while Idroo <a href="http://idroo.com/" target="_blank">www.idroo.com</a> is a free online software that can be used with Google Chrome and latest versions of Internet Explorer and Firefox.
+  
+  Send Us a Message: Send Us a Message
+  Send Us a Message p: We are excited to be able to answer any queries, so please get in touch and we will get back to you within 24 hours.
+  Name: Name
+  Email: Email
+  Message: Message
+  
+  About Us p5:
+  
 
   sign_out: Sign Out
   sign_up: Register
