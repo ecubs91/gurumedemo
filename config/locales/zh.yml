@@ -1,18 +1,76 @@
 zh:
-
-  post_a_tutor_profile: "더하기" 
-  write_a_review: Write a Review
-
+#header
+  About Us: 关于我们
+  Our Tutors: 我们的导师
+  Our Services: 我们的服务
+  Examination Preparation: 考试准备
+  Contact Us: 联系我们
   
-  university: University %{university}
-  degree_subject: Degree Subject %{degree_subject}
-  location: Location %{location}  
-  tutorial_type: Tutorial Type %{tutorial_type}
+#sidebar
+  Try Our Tutors: 见导师试一下
+  Try Our Tutors p: 跟您挑选的导师免费头半个消息的伏到
   
-  sign_out: "Sign Out"
-  sign_up: Sign Up
-  sign_in: Sign In
+  
+#homepage
+  British Education By British Graduates: 英国课程从英国教师
+  home p: 教育亚洲的目标是给亚洲的学生介绍能提供最高的教育质的牛剑教师。
+  
+  home examprep: 私人教程的需求正在不断增加，由于高等教育日益激烈的竞争。要善于国家考试，如SAT ，国际文凭和A级，学生不仅需要理解的主题，但也知道所需的考试技巧。年轻的辅导员认为，获得良好的考试成绩是从具有主题有很好的了。。。
+  home onlinetuition: 在线教导使到学习不分界限，让世界各地的学生都能参与高质量，价格低廉的教导。这对外国学生特别有帮助。 通过使用Skype以及Virtual Whiteboard,学生能随时随地接受教导。Skype让学生与导师说话，而Virtual Whiteboard提供一个白板让。。。
+  read more: 更多
+#about us
+  About Founder: 关于创办人
+  About Founder p: 李赫真, 牛大生物化学 2010-2014
+  About Founder p2: 赫真从十七岁就以开始教普通中等教育证书及国际预科证书课程的学生。他热爱指导学生，而当学生考到良好成绩时，会为他们骄傲。赫真的梦想是能够为申请英国出色学府的学生提供宝贵的资料，让他们把握机会体现自己。
+  About Us p1: 教育的亚洲平台连接的导师，能够提供学术专长的学生寻求校外的学术支持。我们提供从英国顶尖大学，即牛津和剑桥的毕业生网络。我们的教师给予与学校课程和考试准备的学术支持。
+  About Us p2: 教育的亚洲的建立是为了使最优质的家教更容易通过获取在英国的牛津，剑桥的毕业生谁是为受过良好教育，敬业，负责的网上辅导。更重要的是，我们的目标是要超越只是提供经验教训，实现更高的学术成绩，而是提供导师可与学生分享他们已经采取了脚步，并提供建议和指导他们的学术生涯就像高三学生。
+  About Us p3: 作为一个良好的家教是关于一个言简意赅的方式来促进学科的学生的理解沟通导师的学术专长。要做到这一点，需要与学生互动的经验。因此，我们所有的教师有教学经验。
+  About Us p4: 这是事实，是今年的顶部并不意味着他/她将是最好的导师。然而， 教育的亚洲相信还有信心和教学经验，深入了解这个问题是至关重要的。因此，我们所有的教师都在他们教科目达到最高等级
+  Why you can trust Edusia: 相信教育亚洲的因由
+  Teaching Experience: 教的感验
+  Academic Excellence: 学习优秀
 
+#our tutors
+  University: 大学
+  Degree: 专攻
+  Cambridge: 剑桥
+  Oxford: 牛津
+  Teaching Subjects: 教的科目
+  Teaching Levels: 教的课程
+  Mathematics: 数学
+  Chemistry: 化学
+  Physics: 物理
+  PPE: 政治，哲学及经济学
+  Physics and Philsophy: 物理与哲学
+  Engineering: 工程
+  Natural Sciences: 自然科学
+  Law: 法学
+  Economics and Management: 经济与管理
+  Economics: 经济
+  History: 力士
+  English: 英语
+  Philosophy: 哲学
+  Politics: 政治
+  About our tutors: 关于我们的导师
+  ourtutorsp: 下面展示了一些教育的亚洲的导师，谁是从牛津大学和剑桥大学的教育。我们的教师都经过精心挑选的基础上研究和教学经验，通过电话采访了教育的亚洲的团队他们的一个领域。
+  
+  Examination Prepation p: 私人教程的需求正在不断增加，由于高等教育日益激烈的竞争。要善于国家考试，如SAT ，国际文凭和A级，学生不仅需要理解的主题，但也知道所需的考试技巧。年轻的辅导员认为，获得良好的考试成绩是从具有主题有很好的了解不同。年轻的辅导员实现获得被检者的广泛理解和在考试中脱颖而出所需的技能的重要性。
+  Examination Prepation p2: 教育的亚洲提供了完美的解决方案，从所有的教育背景和地域连接教师和学生找到合适的家教学生。
+  Examination Prepation p3: 越来越多的学生和家长重视国际教育的重要性，因此，学生在寻找高质量的教育出国学习上的数量不断增加。将近一百万学生来美国与中国，印度，韩国和沙特的最高数字出国留学的2012-2013学年。国际学生出国与世界进入知名大学的终极目标。
+  
+  Language Learning: 语言学习
+  Language Learning p: 教育亚洲认为，要提高语言说话的最好方法，就是练习与母语的语言说话。说到往往可以忽略不计的语言课程，更加注重阅读和写作，也许是因为阅读和写作可以通过学生自己进行研究。对于口语练习，有很多语言学习机构母语的工作，教外语，但是从这些机构的经验教训可能是昂贵的。年轻的辅导教师提供了一个平台，让语言学习者可以以实惠的价格满足了网上聊天的教训母语。
+  
+  Online Tuition: 在线教导
+  Online Tuition p: 在线教导使到学习不分界限，让世界各地的学生都能参与高质量，价格低廉的教导。这对外国学生特别有帮助。 通过使用Skype以及Virtual Whiteboard,学生能随时随地接受教导。
+  Online Tuition html: Skype让学生与导师说话，而Virtual Whiteboard提供一个白板让导师和学生以写的方式沟通，让导师可以把问题的解决方法更清楚地写或画出来。而且，考试试卷也可以通过pdf或MS word各种applications被发送。 我们推荐的时Skype和Idroo。Skype和Idroo都是免费的，而Idroo <a href="http://idroo.com/" target="_blank">www.idroo.com</a> 另外有Virtual Whiteboard功能。 
+  
+  Send Us a Message: 发信息
+  Send Us a Message p: 我们非常乐意回答您的疑问，随时与我们联络，而我们会尽量在二四十小时内答复。
+  Name: 姓名
+  Email: 邮箱
+  Message: 信息内容 
+  Send: 确定
 
   date:
     abbr_day_names:

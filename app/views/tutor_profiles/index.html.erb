@@ -11,18 +11,27 @@
 </div>
 
 <div class="container profile">
-  <br>  
 <div class="row">
-  <div class="col-md-3 col-sm-4" style="border-right: 2px solid #eee">
-    <h2>A short list of our tutors</h2>
-    <p>On the right, we show some of our tutors.</p>
-  </div>
-  <div class="col-md-9 col-sm-7">
+  <div class="col-md-3">
+    <div class="booktuitionbox">
       <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">       
-            <img src="https://dl.dropboxusercontent.com/s/32h1enk3kzgpd1l/For_Madelaine.jpg?dl=0" class="img-circle" style="width: 120px; img:circular">        
+        <div class="col-md-12">
+          <h3><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <%= t('Try Our Tutors') %></h3>
+          <hr>
+          <p><%= link_to t("Contact Us"), contacts_path, class:"link" %> <%= t('Try Our Tutors p') %></p>
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+      </div>      
+    </div>
+  </div>
+  <div class="col-md-7">      
+    <h2><%= t('About our tutors') %></h2>
+    <p><%= t('ourtutorsp') %></p>
+    <hr>                    
+      <div class="row">
+         <div class="col-md-3 col-sm-4 col-xs-12">  
+           <img src="https://dl.dropboxusercontent.com/s/32h1enk3kzgpd1l/For_Madelaine.jpg?dl=0" class="img-circle" style="width: 140px; img:circular">
+         </div>
+         <div class="col-md-8 col-sm-8 col-xs-12"> 
           <h3>Madelaine T.</h3>
           <p>
             <%= t('University') %>/ <%= t('Degree') %>: <%= t('Cambridge') %>/ <%= t('Engineering') %><br>         
@@ -33,10 +42,10 @@
         </div>                            
       </div>
       <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">        
-            <img src="https://dl.dropboxusercontent.com/s/h5vj8qce3xkfhrj/hugo%20lucas.jpg?dl=0" class="img-circle" style="width: 120px">        
+        <div class="col-md-3 col-sm-4 col-xs-12">        
+            <img src="https://dl.dropboxusercontent.com/s/h5vj8qce3xkfhrj/hugo%20lucas.jpg?dl=0" class="img-circle" style="width: 140px">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+        <div class="col-md-8 col-sm-8 col-xs-12">          
           <h3>Hugo L.</h3>
           <p>
             <%= t('University') %>/ <%= t('Degree') %>: <%= t('Oxford') %>/ <%= t('PPE') %><br>         
@@ -47,10 +56,10 @@
         </div>                            
       </div>
     <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">         
-            <img src="https://dl.dropboxusercontent.com/s/36nemp1gi7xfg75/harry%20mallinson.jpg?dl=0" class="img-circle" style="width: 120px">        
+        <div class="col-md-3 col-sm-4 col-xs-12">         
+            <img src="https://dl.dropboxusercontent.com/s/36nemp1gi7xfg75/harry%20mallinson.jpg?dl=0" class="img-circle" style="width: 140px">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+        <div class="col-md-8 col-sm-8 col-xs-12">          
           <h3>Henry M.</h3>
           <p>
             <%= t('University') %>/ <%= t('Degree') %>: <%= t('Oxford') %>/ <%= t('Physics and Philsophy') %><br>         
@@ -61,10 +70,10 @@
         </div>                            
       </div>
     <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">         
-            <img src="https://dl.dropboxusercontent.com/s/z3pl3bwq12hnt6y/lakshmi_manjoosha.jpg?dl=0" class="img-circle" style="width: 120px">        
+        <div class="col-md-3 col-sm-4 col-xs-12">         
+            <img src="https://dl.dropboxusercontent.com/s/z3pl3bwq12hnt6y/lakshmi_manjoosha.jpg?dl=0" class="img-circle" style="width: 140px">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+        <div class="col-md-8 col-sm-8 col-xs-12">          
           <h3>Lakshmi M.</h3>
           <p>
            <%= t('University') %>/ <%= t('Degree') %>: <%= t('Oxford') %>/ <%= t('Engineering') %><br>         
@@ -75,10 +84,10 @@
         </div>                            
     </div>
     <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">        
-            <img src="https://dl.dropboxusercontent.com/s/7i5safqh1z6ibcr/10458986_590268971093972_6021020358081408888_o.jpg?dl=0" class="img-circle" style="width: 120px">        
+        <div class="col-md-3 col-sm-4 col-xs-12">        
+            <img src="https://dl.dropboxusercontent.com/s/7i5safqh1z6ibcr/10458986_590268971093972_6021020358081408888_o.jpg?dl=0" class="img-circle" style="width: 140px">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+        <div class="col-md-8 col-sm-8 col-xs-12">          
           <h3>Alice C.</h3>
           <p>
             <%= t('University') %>/ <%= t('Degree') %>: <%= t('Cambridge') %>/ <%= t('Natural Sciences') %><br>         
@@ -89,10 +98,10 @@
         </div>                            
     </div>
     <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">         
-            <img src="https://dl.dropboxusercontent.com/s/i0z2vrh3sz43qi2/Oliver-Johnson%20Munday.JPG?dl=0" class="img-circle" style="width: 120px">        
+        <div class="col-md-3 col-sm-4 col-xs-12">         
+            <img src="https://dl.dropboxusercontent.com/s/i0z2vrh3sz43qi2/Oliver-Johnson%20Munday.JPG?dl=0" class="img-circle" style="width: 140px">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+        <div class="col-md-8 col-sm-8 col-xs-12">          
           <h3>Oliver J.</h3>
           <p>
             <%= t('University') %>/ <%= t('Degree') %>: <%= t('Oxford') %>/ <%= t('Law') %><br>         
@@ -103,10 +112,10 @@
         </div>                            
     </div>
     <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-12">    
-            <img src="https://dl.dropboxusercontent.com/s/g85wh1qxgqrdvng/shayantan%20rahman.jpg?dl=0" class="img-circle" style="width: 120px">        
+        <div class="col-md-3 col-sm-4 col-xs-12">    
+            <img src="https://dl.dropboxusercontent.com/s/g85wh1qxgqrdvng/shayantan%20rahman.jpg?dl=0" class="img-circle" style="width: 140px">        
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12">          
+        <div class="col-md-8 col-sm-8 col-xs-12">          
           <h3>Shay R.</h3>
           <p>
             <%= t('University') %>/ <%= t('Degree') %>: <%= t('Oxford') %>/ <%= t('Economics and Management') %><br>         
