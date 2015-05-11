@@ -101,6 +101,7 @@ Etsydemo::Application.routes.draw do
   get "pages/language_learning"
   get "pages/examinations"
   get "pages/online_tuition"
+  get "pages/our_tutors"
   
   
   post "pages/get_town_from_country_for_step_1"
